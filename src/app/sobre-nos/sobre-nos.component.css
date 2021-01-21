@@ -1,0 +1,9 @@
+.br-50{
+    border-radius: 50%;
+}
+#imagem{
+    position: fixed;
+    width: 50%;
+    height: 50%;
+    opacity: 0.3;
+}
