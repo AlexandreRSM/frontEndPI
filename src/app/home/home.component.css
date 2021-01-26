@@ -2,7 +2,28 @@
   font-family: 'Snippet', sans-serif;
 }
 
-img{
+.carousel-item {
+  height: 100vh;
+  min-height: 350px;
+  background: no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.sobrepos .img-fluid{
+  background: rgba(#045211d7, green, blue, .06);
+  width: 100%;
+  height: auto;
+  opacity: 0.6;
+  position: absolute;
+  top: 0;
+}
+
+.sobrepos{
+  background: url('https://cdn.pixabay.com/photo/2016/10/22/15/35/fruits-1761031_960_720.jpg');
+  position: relative;
 
 }
 
@@ -13,7 +34,12 @@ h1 {
 p {
   font-size: 1.2rem;
 }
-
+#quem-somos{
+  position:absolute;
+  font-size: 72pt;
+  left: 125px;
+  top: 135px;
+}
 
 @media (min-width: 750px) {
   h1 {
@@ -21,6 +47,10 @@ p {
   }
 
   p {
-    font-size: 2.5rem;
+    font-size: 1.5rem;
   }
 }
+
+
+
+

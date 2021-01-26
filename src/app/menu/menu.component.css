@@ -5,25 +5,25 @@
 .fonte {
     font-family: 'Snippet', sans-serif;
   }
-  
-  img{
-      
+
+  .custom-logo{
+    height: 60px;
   }
-  
+
   h1 {
     font-size: 1.8rem;
   }
-  
+
   p {
     font-size: 1.2rem;
   }
-  
-  
+
+
   @media (min-width: 750px) {
     h1 {
       font-size: 4.5rem;
     }
-  
+
     p {
       font-size: 2.5rem;
     }
