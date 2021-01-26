@@ -9,6 +9,15 @@ import { ContatoComponent } from './contato/contato.component';
 import { MenuComponent } from './menu/menu.component';
 import { FooterComponent } from './footer/footer.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { CadastrarComponent } from './cadastrar/cadastrar.component';
+import { EntrarComponent } from './entrar/entrar.component';
+import { CardapioComponent } from './cardapio/cardapio.component';
+import { PedidosComponent } from './pedidos/pedidos.component';
+import { CadastroProdutosComponent } from './cadastro-produtos/cadastro-produtos.component';
+import { ObjetivoOdsComponent } from './objetivo-ods/objetivo-ods.component';
+import { CadastroUsuarioComponent } from './cadastro-usuario/cadastro-usuario.component';
+import { CadastroProdutorComponent } from './cadastro-produtor/cadastro-produtor.component';
+import { MissaoVisaoValoresComponent } from './missao-visao-valores/missao-visao-valores.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +26,16 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     SobreNosComponent,
     ContatoComponent,
     MenuComponent,
-    FooterComponent
+    FooterComponent,
+    CadastrarComponent,
+    EntrarComponent,
+    CardapioComponent,
+    PedidosComponent,
+    CadastroProdutosComponent,
+    ObjetivoOdsComponent,
+    CadastroUsuarioComponent,
+    CadastroProdutorComponent,
+    MissaoVisaoValoresComponent
   ],
   imports: [
     BrowserModule,

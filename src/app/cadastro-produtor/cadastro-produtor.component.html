@@ -1,0 +1,101 @@
+
+<div class="container-fluid">
+    <div class="row">
+      <div class="col-md-6" id="bg"></div>
+      <div class="col-md-6 mt-5 mb-5">
+        <div class="row d-flex justify-content-center">
+          <div class="col-md-10">
+  
+            <h3 class="text-center mt-5 mb-4">Cadastro Produtor</h3>
+            
+            <div class="form-group">
+              <label for="nome">Nome</label>
+              <input class="form-control p-3 mb-2 bg-light" type="text" name="nome" id="nome"
+                placeholder="Digite seu nome">
+            </div>
+  
+            <div class="form-group">
+              <label for="usuario">Usuário</label>
+              <input class="form-control p-3 mb-2 bg-light" type="text" name="usuario" id="usuario"
+                placeholder="Digite seu usuário" required minlength="5">
+              <div style="color: red; font-size: 50%;">
+                Nome de usuário deve ter pelo menos 5 caracteres.
+              </div>
+            </div>
+  
+            <div class="form-group">
+              <label for="email">E-mail</label>
+              <input class="form-control p-3 mb-2 bg-light" type="email" name="email" id="email"
+                placeholder="Digite seu e-mail">
+            </div>
+  
+            <div class="form-group">
+              <label for="foto">Foto</label>
+              <input class="form-control p-3 mb-2 bg-light" type="text" name="foto" id="foto"
+                placeholder="Link da sua foto">
+            </div>
+  
+            <div class="form-group">
+              <label for="tipo">Tipo de Produtor</label>
+              <select class="form-control" name="tipo" id="tipo">
+                <option>Selecione seu tipo de produção:</option>
+                <option value="#">Monocultura</option>
+                <option value="#">Agricultura Familiar</option>
+                <option value="#">3</option>
+                <option value="#">4</option>
+                <option value="#">5</option>
+                <option value="#">6</option>
+                <option value="#">7</option>
+              </select>
+            </div>
+  
+            <h4 class="text-center mt-5 mb-4">Cadastro Comércio</h4>
+  
+            <div class="form-group">
+              <label for="comercio">Nome do estabelecimento</label>
+              <input class="form-control p-3 mb-2 bg-light" type="text" name="comercio" id="comercio"
+                placeholder="Nome do seu estabelecimento">
+            </div>
+  
+            <div class="form-group">
+              <label for="contato">Telefone para contato</label>
+              <input class="form-control p-3 mb-2 bg-light" type="tel" name="tel" id="tel"
+                placeholder="Telefone do estabelecimento">
+            </div>
+  
+            <div class="form-group">
+              <label for="endereco">Endereço</label>
+              <input class="form-control p-3 mb-2 bg-light" type="text" name="endereco" id="endereco"
+                placeholder="Rua, n. Bairro. Cidade/UF">
+            </div>
+  
+            <div class="form-group">
+              <label for="cep">CEP</label>
+              <input class="form-control p-3 mb-2 bg-light" type="text" name="cep" id="cep"
+                placeholder="CEP">
+            </div>
+  
+            <div class="form-group">
+              <label for="senha">Senha</label>
+              <input class="form-control p-3 mb-2 bg-light" type="password" name="senha" id="senha"
+                placeholder="Digite sua senha">
+            </div>
+  
+            <div class="form-group">
+              <label for="senha">Confirmar Senha</label>
+              <input class="form-control p-3 mb-2 bg-light" type="password" name="confirmSenha" id="confirmSenha"
+                placeholder="Confirme sua senha">
+            </div>
+  
+  
+            <div class="d-flex justify-content-center">
+              <button type="submit" class="btn btn-hover color-2 m-4" routerLink="/entrar">Cancelar</button>
+              <button type="submit" class="btn btn-hover color-5 m-4">Cadastrar</button>
+            </div>
+  
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
