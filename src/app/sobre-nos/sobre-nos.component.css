@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 .br-50{
     border-radius: 50%;
 }
@@ -9,7 +7,7 @@
     height: 50%;
     opacity: 0.3;
 }
->>>>>>> 08747ff071885dec8168ff3846b0b9b69d719805
+
 .card{
     cursor: pointer;
     width:1000px;
@@ -39,12 +37,8 @@
     width: 100%;
   }
   .sm{
-<<<<<<< HEAD
-    margin: 20px 0;
-=======
-    margin: 10px 0;
->>>>>>> 08747ff071885dec8168ff3846b0b9b69d719805
-  
+
+    margin: 10px 0;  
   }
   .sm a{
     display: inline-flex;
