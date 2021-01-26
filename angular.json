@@ -131,6 +131,10 @@
   },
   "defaultProject": "projetoIntegrador",
   "cli": {
+<<<<<<< HEAD
     "analytics": "b093a1f6-903b-4f68-8b01-34a84830f3cf"
+=======
+    "analytics": "f2fdbe6a-9f76-4129-92be-48e7b085a6a3"
+>>>>>>> 08747ff071885dec8168ff3846b0b9b69d719805
   }
 }
