@@ -1,0 +1,59 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-6" id="bg"></div>
+        <div class="col-md-6 mt-5 mb-5">
+            <div class="row d-flex justify-content-center">
+                <div class="col-md-10">
+
+                    <h3 class="text-center mt-5 mb-4">Cadastro Usuário</h3>
+
+                    <div class="form-group">
+                        <label for="nome">Nome</label>
+                        <input [(ngModel)]='usuario.nome' class="form-control p-3 mb-2 bg-light" type="text" name="nome"
+                            id="nome" placeholder="Digite seu nome">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="usuario">Usuário</label>
+                        <input [(ngModel)]='usuario.usuario' class="form-control p-3 mb-2 bg-light" type="text"
+                            name="usuario" id="usuario" placeholder="Digite seu usuário" required minlength="5">
+                        <div style="color: red; font-size: 50%;">
+                            Nome de usuário deve ter pelo menos 5 caracteres.
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">E-mail</label>
+                        <input [(ngModel)]='usuario.email' class="form-control p-3 mb-2 bg-light" type="text"
+                            name="email" id="email" placeholder="Digite seu e-mail">
+                    </div>
+                    <div class="form-group">
+                        <label for="tipo">Tipo de Usuário</label>
+                        <select class="form-control" name="tipo" id="tipo" (change)='tipoUser($event)'>
+                            <option>Selecione seu tipo de produção:</option>
+                            <option value="cliente">Cliente</option>
+                            <option value="produtor">Produtor</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="senha">Senha</label>
+                        <input (input)='confirmSenha($event)' class="form-control p-3 mb-2 bg-light" type="password"
+                            name="senha" id="senha" placeholder="Digite sua senha">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="senha">Confirmar Senha</label>
+                        <input [(ngModel)]='usuario.senha' class="form-control p-3 mb-2 bg-light" type="password"
+                            name="confirmSenha" id="confirmSenha" placeholder="Confirme sua senha">
+                    </div>
+
+                    <div class="d-flex justify-content-center">
+                        <button type="submit" class="btn btn-hover color-2 m-4" routerLink="/entrar">Cancelar</button>
+                        <button type="submit" class="btn btn-hover color-5 m-4" (click) = 'cadastrar()'>Cadastrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

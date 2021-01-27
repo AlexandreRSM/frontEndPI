@@ -1,3 +1,5 @@
+import { EntrarComponent } from './entrar/entrar.component';
+import { CadastrarComponent } from './cadastrar/cadastrar.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { ContatoComponent } from './contato/contato.component';
@@ -8,7 +10,9 @@ const routes: Routes = [
   { path: "", redirectTo: "home", pathMatch: "full" },
   { path: "home", component: HomeComponent },
   { path: "sobre-nos", component: SobreNosComponent },
-  { path: "contato", component: ContatoComponent }
+  { path: "contato", component: ContatoComponent },
+  { path: "cadastrar", component: CadastrarComponent },
+  { path: "entrar", component: EntrarComponent }
 ];
 
 @NgModule({
