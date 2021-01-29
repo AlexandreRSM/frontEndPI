@@ -1,3 +1,4 @@
+import { CadastroProdutosComponent } from './cadastro-produtos/cadastro-produtos.component';
 import { CategoriaEditComponent } from './edit/categoria-edit/categoria-edit.component';
 import { CadastroCategoriaComponent } from './cadastro-categoria/cadastro-categoria.component';
 import { CardapioComponent } from './cardapio/cardapio.component';
@@ -20,7 +21,9 @@ const routes: Routes = [
   { path: "cardapio", component: CardapioComponent },
   { path: "cadastro-categoria", component: CadastroCategoriaComponent },
   { path: "categoria-edit/:id", component: CategoriaEditComponent },
-  { path: "categoria-delete/:id", component: CategoriaDeleteComponent }
+  { path: "categoria-delete/:id", component: CategoriaDeleteComponent },
+  { path: "cadastro-produtos", component: CadastroProdutosComponent }
+
 
 ];
 

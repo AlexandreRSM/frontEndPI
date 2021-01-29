@@ -32,7 +32,7 @@ export class EntrarComponent implements OnInit {
       environment.tipo = this.userLogin.tipo
       environment.email = this.userLogin.email
       
-      this.router.navigate(['/cardapio'])
+      this.router.navigate(['/cadastro-produtos']) /* FAZER O IF DO USUARIO ou PRODUTO*/
 
     }, erro => {
       if (erro.status == 500) {

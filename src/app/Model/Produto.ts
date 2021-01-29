@@ -1,3 +1,4 @@
+import { Usuario } from './Usuario';
 import { Categoria } from './Categoria';
 
 export class Produto{
@@ -7,6 +8,8 @@ export class Produto{
   public preco: number
   public disponibilidade: boolean
   public qtd: number
+  public usuario : Usuario
   public regiao: string
-  public categoria: Categoria[]
+  public categoria: Categoria
+
 }

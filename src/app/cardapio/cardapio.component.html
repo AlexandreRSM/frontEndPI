@@ -1,6 +1,5 @@
-<div id="bg">
-    <div class="menu m-5 mt-100">
-
+<!-- <div id="bg" class="mt-100">    
+    <div class="menu m-5">
         <div class="food-items mt-4 mb-4">
             <img src="https://i.imgur.com/FjBJsEE.jpg" alt="">
             <div class="details">
@@ -19,113 +18,24 @@
                     <p> Quantidade: . </p>
                 </div>
                 <button class="btn-hover color-5"><i class="bi bi-bag-plus"></i></button>
+                <button class="btn btn-info" [routerLink]="[]">Editar produto</button>
+                <button class="btn btn-danger" [routerLink]="[]">Apagar produto</button>
             </div>
         </div>
+    </div>
+</div> -->
 
-        <div class="food-items mt-4 mb-4">
-            <img src="https://i.imgur.com/FjBJsEE.jpg" alt="">
-            <div class="details">
-                <div class="details-sub">
-                    <div class="container d-flex m-1">
-                        <div class="col-md-6">
-                            <h4>Cebola</h4>
-                        </div>
-                        <div class="col-md-6">
-                            <h4 class="preco">R$ 2,00</h4>
-                        </div>
-                    </div>
-                    <p> Descrição: .</p>
-                    <p> Categoria: . </p>
-                    <p> Região: . </p>
-                    <p> Quantidade: . </p>
-                </div>
-                <button class="btn-hover color-5"><i class="bi bi-bag-plus"></i></button>
-            </div>
+
+<div class="card-columns">
+    <div class="card" style="width: 18rem;" *ngFor="let item of listaProdutos" >
+
+        <img class="card-img-top" src=".../100px180/?text=Image cap" alt="Imagem de capa do card">
+
+        <div class="card-body">
+            <p class="card-text">Nome {{item.nome}}</p>
+            <p class="card-text">Descricao {{item.descricao}}</p>
+            <p class="card-text">regiao {{item.regiao}}</p>
+            <p class="card-text">qtd {{item.qtd}}</p>
         </div>
-
-        <div class="food-items mt-4 mb-4">
-            <img src="https://i.imgur.com/FjBJsEE.jpg" alt="">
-            <div class="details">
-                <div class="details-sub">
-                    <div class="container d-flex m-1">
-                        <div class="col-md-6">
-                            <h4>Cebola</h4>
-                        </div>
-                        <div class="col-md-6">
-                            <h4 class="preco">R$ 2,00</h4>
-                        </div>
-                    </div>
-                    <p> Descrição: .</p>
-                    <p> Categoria: . </p>
-                    <p> Região: . </p>
-                    <p> Quantidade: . </p>
-                </div>
-                <button class="btn-hover color-5"><i class="bi bi-bag-plus"></i></button>
-            </div>
-        </div>
-
-        <div class="food-items mt-4 mb-4">
-            <img src="https://i.imgur.com/FjBJsEE.jpg" alt="">
-            <div class="details">
-                <div class="details-sub">
-                    <div class="container d-flex m-1">
-                        <div class="col-md-6">
-                            <h4>Cebola</h4>
-                        </div>
-                        <div class="col-md-6">
-                            <h4 class="preco">R$ 2,00</h4>
-                        </div>
-                    </div>
-                    <p> Descrição: .</p>
-                    <p> Categoria: . </p>
-                    <p> Região: . </p>
-                    <p> Quantidade: . </p>
-                </div>
-                <button class="btn-hover color-5"><i class="bi bi-bag-plus"></i></button>
-            </div>
-        </div>
-
-        <div class="food-items mt-4 mb-4">
-            <img src="https://i.imgur.com/FjBJsEE.jpg" alt="">
-            <div class="details">
-                <div class="details-sub">
-                    <div class="container d-flex m-1">
-                        <div class="col-md-6">
-                            <h4>Cebola</h4>
-                        </div>
-                        <div class="col-md-6">
-                            <h4 class="preco">R$ 2,00</h4>
-                        </div>
-                    </div>
-                    <p> Descrição: .</p>
-                    <p> Categoria: . </p>
-                    <p> Região: . </p>
-                    <p> Quantidade: . </p>
-                </div>
-                <button class="btn-hover color-5"><i class="bi bi-bag-plus"></i></button>
-            </div>
-        </div>
-
-        <div class="food-items mt-4 mb-4">
-            <img src="https://i.imgur.com/FjBJsEE.jpg" alt="">
-            <div class="details">
-                <div class="details-sub">
-                    <div class="container d-flex m-1">
-                        <div class="col-md-6">
-                            <h4>Cebola</h4>
-                        </div>
-                        <div class="col-md-6">
-                            <h4 class="preco">R$ 2,00</h4>
-                        </div>
-                    </div>
-                    <p> Descrição: .</p>
-                    <p> Categoria: . </p>
-                    <p> Região: . </p>
-                    <p> Quantidade: . </p>
-                </div>
-                <button class="btn-hover color-5"><i class="bi bi-bag-plus"></i></button>
-            </div>
-        </div>
-
     </div>
 </div>

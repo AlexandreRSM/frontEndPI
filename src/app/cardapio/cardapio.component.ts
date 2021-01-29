@@ -1,4 +1,6 @@
+import { ProdutoService } from './../service/produto.service';
 import { Component, OnInit } from '@angular/core';
+import { Produto } from '../Model/Produto';
 
 @Component({
   selector: 'app-cardapio',
@@ -7,9 +9,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CardapioComponent implements OnInit {
 
-  constructor() { }
+  listaProdutos: Produto[]
+
+
+  constructor(
+    private produtoService: ProdutoService
+  ) { }
 
   ngOnInit() {
+  }
+
+  getAllProdutos() {
+    this.produtoService.getAllProdutos().subscribe((resp: Produto[]) => {
+      this.listaProdutos = resp
+    })
   }
 
 }
