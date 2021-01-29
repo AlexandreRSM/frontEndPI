@@ -69,3 +69,6 @@ h1{
   background-image: linear-gradient(to right, #d49f50, #ec7e00, #eb9e2c, #ecda34);
   box-shadow: 4px 4px 30px 4px rgba(0, 0, 0, 0.61);
 }
+.mt-100{
+  margin-top: 100px;
+}

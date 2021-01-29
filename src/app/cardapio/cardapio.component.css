@@ -1,0 +1,109 @@
+
+ .mt-100{
+  margin-top: 100px;
+}
+.menu {
+    padding: 0 10px 30px 10px;
+    display: -ms-grid;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 30px 40px;
+  }
+  
+  .food-items {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: auto 1fr;
+    grid-template-rows: auto 1fr;
+    position: relative;
+    border-radius: 15px;
+    -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0, 15);
+  }
+  
+  .food-items>img {
+    position: relative;
+    width: 100%;
+    border-radius: 25px 25px 0 0;
+  }
+  
+  .details {
+    padding: 20px 20px;
+    display: -ms-grid;
+    display: grid;
+    grid-row-gap: 18px;
+    -ms-grid-rows: auto 15px 1fr 15px 50px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 0 0 25px 25px;
+    border-style: groove;
+  }
+  
+  p {
+    color: #000000;
+    font-size: 18px;
+    text-align: justify;
+  }
+  
+  a {
+    background-color: #CB202D;
+    display: block;
+    color: white;
+    width: 100%;
+    position: relative;
+    text-decoration: none;
+    text-align: center;
+    bottom: 0;
+    font-size: 20px;
+    padding: 30px 0;
+  }
+  
+  .d-line{
+      display: inline;
+  }
+  
+  
+  /* botao */
+  i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25pt;
+  }
+  
+  .btn-hover {
+    width: 80px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    margin: 10px;
+    height: 70px;
+    border: none;
+    background-size: 300% 100%;
+  
+    border-radius: 50px;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+  }
+  .btn-hover:hover {
+    background-position: 100% 0;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+  }
+  
+  .btn-hover:focus {
+    outline: none;
+  }
+  
+  .btn-hover.color-5 {
+    background-image: linear-gradient(to right, #0ba360, #3cba92, #30dd8a, #2bb673);
+    box-shadow: 0 4px 15px 0 rgba(23, 168, 108, 0.75);
+  }
+  
+  .btn-hover.color-2 {
+    background-image: linear-gradient(to right, #eeb722, #e43603, #d30909, #a73704e3);
+    box-shadow: 0 4px 15px 0 rgba(229, 66, 10, 0.75);
+  }
+ 

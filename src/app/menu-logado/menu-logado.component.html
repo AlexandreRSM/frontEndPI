@@ -1,0 +1,45 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+            <img class="custom-logo" src="https://i.imgur.com/W9DEFjF.png?1" alt="">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+            aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <ul class="navbar-nav ml-auto d-flex align-items-center">
+            <li class="nav-item pl-3">
+
+                <p class="pr-3 m-0 font-weight-bold text-secondary fs-16">Olá, {{nome}}</p>
+            </li>
+        </ul>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">                
+                <li class="nav-item">
+                    <a class="nav-link" routerLink='/cadastrar'>Produtos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink='/entrar'>Categorias</a>
+                </li>
+              
+                <li class="nav-item">
+                    <a class="nav-link" routerLink='/contato'>Contatos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink='/sobre-nos'>Sobre nós</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink='/cadastro-categoria'>Cadastrar categorias</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav ml-auto d-flex align-items-center">
+                <li class="nav-item pl-3">
+                    <a (click)='sair()' class="m-0 font-weight-bold text-secondary fs-16">Sair <i class="fa fa-sign-out"
+                            aria-hidden="true"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

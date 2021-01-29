@@ -31,7 +31,8 @@ export class EntrarComponent implements OnInit {
       environment.id = this.userLogin.id
       environment.tipo = this.userLogin.tipo
       environment.email = this.userLogin.email
-      this.router.navigate(['/home'])
+      
+      this.router.navigate(['/cardapio'])
 
     }, erro => {
       if (erro.status == 500) {

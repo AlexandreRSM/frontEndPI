@@ -1,20 +1,6 @@
 
-<!-- <app-cadastrar></app-cadastrar> 
-<app-cadastro-produtor></app-cadastro-produtor>
-<app-cadastro-produtos></app-cadastro-produtos> 
-<app-cadastro-usuario></app-cadastro-usuario>
-<app-cardapio></app-cardapio>
-<app-contato></app-contato>
-<app-entrar></app-entrar>
-<app-footer></app-footer>
-<app-home></app-home>
-<app-menu></app-menu>
-<app-missao-visao-valores></app-missao-visao-valores>
-<app-objetivo-ods></app-objetivo-ods>
-<app-pedidos></app-pedidos> 
-<app-sobre-nos></app-sobre-nos> -->
-
-<app-menu *ngIf = 'auth.logado()'></app-menu>
+<app-menu-logado *ngIf = 'auth.logado()'></app-menu-logado>
+<app-menu *ngIf = '!auth.logado()'></app-menu>
 <router-outlet></router-outlet>
-<app-footer *ngIf = 'auth.logado()'></app-footer>
+<app-footer></app-footer> 
 

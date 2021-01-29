@@ -62,3 +62,6 @@
   .card:hover > .back{
     transform: perspective(600px) rotateY(0deg);
   }
+  .mt-100{
+    margin-top: 100px;
+  }

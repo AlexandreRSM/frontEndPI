@@ -17,9 +17,9 @@ import { CardapioComponent } from './cardapio/cardapio.component';
 import { PedidosComponent } from './pedidos/pedidos.component';
 import { CadastroProdutosComponent } from './cadastro-produtos/cadastro-produtos.component';
 import { ObjetivoOdsComponent } from './objetivo-ods/objetivo-ods.component';
-import { CadastroUsuarioComponent } from './cadastro-usuario/cadastro-usuario.component';
-import { CadastroProdutorComponent } from './cadastro-produtor/cadastro-produtor.component';
 import { MissaoVisaoValoresComponent } from './missao-visao-valores/missao-visao-valores.component';
+import { MenuLogadoComponent } from './menu-logado/menu-logado.component';
+import { CadastroCategoriaComponent } from './cadastro-categoria/cadastro-categoria.component';
 
 
 @NgModule({
@@ -36,9 +36,9 @@ import { MissaoVisaoValoresComponent } from './missao-visao-valores/missao-visao
     PedidosComponent,
     CadastroProdutosComponent,
     ObjetivoOdsComponent,
-    CadastroUsuarioComponent,
-    CadastroProdutorComponent,
-    MissaoVisaoValoresComponent
+    MissaoVisaoValoresComponent,
+    MenuLogadoComponent,
+    CadastroCategoriaComponent
   ],
   imports: [
     BrowserModule,

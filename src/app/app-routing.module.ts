@@ -1,3 +1,5 @@
+import { CadastroCategoriaComponent } from './cadastro-categoria/cadastro-categoria.component';
+import { CardapioComponent } from './cardapio/cardapio.component';
 import { EntrarComponent } from './entrar/entrar.component';
 import { CadastrarComponent } from './cadastrar/cadastrar.component';
 import { NgModule } from '@angular/core';
@@ -12,7 +14,10 @@ const routes: Routes = [
   { path: "sobre-nos", component: SobreNosComponent },
   { path: "contato", component: ContatoComponent },
   { path: "cadastrar", component: CadastrarComponent },
-  { path: "entrar", component: EntrarComponent }
+  { path: "entrar", component: EntrarComponent },
+  { path: "cardapio", component: CardapioComponent },
+  { path: "cadastro-categoria", component: CadastroCategoriaComponent }
+
 ];
 
 @NgModule({
