@@ -20,6 +20,8 @@ import { ObjetivoOdsComponent } from './objetivo-ods/objetivo-ods.component';
 import { MissaoVisaoValoresComponent } from './missao-visao-valores/missao-visao-valores.component';
 import { MenuLogadoComponent } from './menu-logado/menu-logado.component';
 import { CadastroCategoriaComponent } from './cadastro-categoria/cadastro-categoria.component';
+import { CategoriaEditComponent } from './edit/categoria-edit/categoria-edit.component';
+import { CategoriaDeleteComponent } from './delete/categoria-delete/categoria-delete.component';
 
 
 @NgModule({
@@ -38,7 +40,9 @@ import { CadastroCategoriaComponent } from './cadastro-categoria/cadastro-catego
     ObjetivoOdsComponent,
     MissaoVisaoValoresComponent,
     MenuLogadoComponent,
-    CadastroCategoriaComponent
+    CadastroCategoriaComponent,
+    CategoriaEditComponent,
+    CategoriaDeleteComponent
   ],
   imports: [
     BrowserModule,

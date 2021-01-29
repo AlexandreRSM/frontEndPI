@@ -1,3 +1,4 @@
+import { CategoriaEditComponent } from './edit/categoria-edit/categoria-edit.component';
 import { CadastroCategoriaComponent } from './cadastro-categoria/cadastro-categoria.component';
 import { CardapioComponent } from './cardapio/cardapio.component';
 import { EntrarComponent } from './entrar/entrar.component';
@@ -7,6 +8,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { ContatoComponent } from './contato/contato.component';
 import { HomeComponent } from './home/home.component';
 import { SobreNosComponent } from './sobre-nos/sobre-nos.component';
+import { CategoriaDeleteComponent } from './delete/categoria-delete/categoria-delete.component';
 
 const routes: Routes = [
   { path: "", redirectTo: "home", pathMatch: "full" },
@@ -16,7 +18,9 @@ const routes: Routes = [
   { path: "cadastrar", component: CadastrarComponent },
   { path: "entrar", component: EntrarComponent },
   { path: "cardapio", component: CardapioComponent },
-  { path: "cadastro-categoria", component: CadastroCategoriaComponent }
+  { path: "cadastro-categoria", component: CadastroCategoriaComponent },
+  { path: "categoria-edit/:id", component: CategoriaEditComponent },
+  { path: "categoria-delete/:id", component: CategoriaDeleteComponent }
 
 ];
 

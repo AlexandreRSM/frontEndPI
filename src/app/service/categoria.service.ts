@@ -10,18 +10,30 @@ import { Categoria } from '../Model/Categoria';
 export class CategoriaService {
 
   constructor(
-    private http:HttpClient
+    private http: HttpClient
   ) { }
 
   token = {
     headers: new HttpHeaders().set('Authorization', environment.token)
   }
 
-  getAllCategoria():Observable<Categoria[]>{
+  getAllCategoria(): Observable<Categoria[]> {
     return this.http.get<Categoria[]>('http://localhost:8080/cat', this.token)
   }
-  postCategoria(categoria : Categoria):Observable<Categoria>{
+
+  getByIdCategoria(id:number): Observable<Categoria>{
+    return this.http.get<Categoria>(`http://localhost:8080/cat/${id}`, this.token)
+  }
+
+  postCategoria(categoria: Categoria): Observable<Categoria> {
     return this.http.post<Categoria>('http://localhost:8080/cat', categoria, this.token)
   }
-  
+
+  putCategoria(categoria: Categoria): Observable<Categoria> {
+    return this.http.put<Categoria>('http://localhost:8080/cat', categoria, this.token)
+  }
+
+  deleteCategoria(id: number) {
+    return this.http.delete(`http://localhost:8080/cat/${id}`, this.token)
+  }
 }
