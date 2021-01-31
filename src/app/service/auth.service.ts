@@ -22,10 +22,14 @@ export class AuthService {
     return this.http.post<Usuario>('http://localhost:8080/usuarios/cadastrar', usuario)
   }
 
-  logado(){
-    let ok : boolean = false 
+  getByIdUsuario(id: number):Observable<Usuario>{
+    return this.http.get<Usuario>(`http://localhost:8080/usuarios/${id}`)
+  }/*  */
 
-    if (environment.token != ''){
+  logado() {
+    let ok: boolean = false
+
+    if (environment.token != '') {
       ok = true
     }
     return ok

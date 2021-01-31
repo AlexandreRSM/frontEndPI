@@ -21,9 +21,6 @@ export class MenuLogadoComponent implements OnInit {
     this.router.navigate(['/home'])
     environment.token = ''
     environment.nome = ''
-    
-
-
   }
 
 }

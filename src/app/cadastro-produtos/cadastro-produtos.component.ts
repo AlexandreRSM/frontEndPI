@@ -53,17 +53,14 @@ export class CadastroProdutosComponent implements OnInit {
     this.categoriaService.getByIdCategoria(this.idCategoria).subscribe((resp : Categoria) => {
       this.categoria = resp
     })
-  }
-
-  
+  }  
 
   cadastrarProduto(){
     this.categoria.id = this.idCategoria
     this.produto.categoria = this.categoria
 
     this.user.id = this.idUsuario
-    this.produto.usuario = this.user
-    console.log(this.produto)
+    this.produto.usuario = this.user    
 
     this.produtoService.postProduto(this.produto).subscribe((resp : Produto) =>{
       this.produto = resp

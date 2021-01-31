@@ -14,13 +14,16 @@ export class ProdutoService {
 
   token = {
     headers: new HttpHeaders().set('Authorization', environment.token)
-  }
+  } 
 
-  getAllProdutos(): Observable<Produto[]> {
+  getAllProduto(): Observable<Produto[]> {
     return this.http.get<Produto[]>('http://localhost:8080/prod', this.token)
   }
+
   postProduto(produto: Produto): Observable<Produto> {
     return this.http.post<Produto>('http://localhost:8080/prod', produto, this.token)
   } 
+
+  
   
 }

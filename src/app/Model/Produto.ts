@@ -12,4 +12,7 @@ export class Produto{
   public regiao: string
   public categoria: Categoria
 
+
+  /*ADICIONAR FOTO!*/
+
 }
