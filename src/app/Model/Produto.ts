@@ -12,8 +12,5 @@ export class Produto{
   public regiao: string
   public categoria: Categoria
   public foto: string
-
-
-  /*ADICIONAR FOTO!*/
-
 }
+

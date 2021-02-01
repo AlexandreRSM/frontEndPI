@@ -2,104 +2,108 @@
     <div class="container">
         <button class="btn btn-info mr-3" data-toggle="modal" data-target="#novoProduto">Adicionar produto</button>
     </div>
-<div id="bg">
-    <div class="menu m-5">
-        <div class="food-items mt-4 mb-4" *ngFor="let item of listaProdutos">
-            <img src="{{item.foto}}" alt="">
-            <div class="details">
-                <div class="details-sub">
-                    <div class="container d-flex m-1">
-                        <div class="col-md-6">
-                            <h4>{{item.nome}}</h4>
+    <div id="bg">
+        <div class="menu m-5">
+            <div class="food-items mt-4 mb-4" *ngFor="let item of listaProdutos">
+                <img src="{{item.foto}}" alt="">
+                <div class="details">
+                    <div class="details-sub">
+                        <div class="container d-flex m-1">
+                            <div class="col-md-6">
+                                <h4>{{item.nome}}</h4>
+                            </div>
+                            <div class="col-md-6">
+
+                                <h4 class="preco">R$ {{item.preco}}</h4>
+                            </div>
                         </div>
-                        <div class="col-md-6">
-                            <h4 class="preco">R$ {{item.preco}}</h4>
+                        <p> Descrição: {{item.descricao}}.</p>
+                        <p> Categoria: {{item.categoria.categoria}}. </p>
+                        <p> Região: {{item.regiao}} </p>
+                        <p> Quantidade: {{item.qtd}} </p>
+                    </div>
+                    <button class="btn btn-info" [routerLink]="['/produto-edit', item.id]">Editar produto</button>
+                    <button class="btn btn-danger" [routerLink]="['/produto-delete', item.id]">Apagar produto</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Modal para Adicionar produtos -->
+    <div class="modal fade" id="novoProduto" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="TituloModalCentralizado">Novo Produto</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+
+                    <div class="form-group">
+                        <label for="titulo">Nome</label>
+                        <input [(ngModel)]='produto.nome' type="text" class="form-control" id="titulo"
+                            placeholder="Digite o título">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="texto">Descrição</label>
+                        <textarea [(ngModel)]='produto.descricao' class="form-control" name="texto" id="texto"
+                            rows="1"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="texto">Foto</label>
+                        <textarea [(ngModel)]='produto.foto' class="form-control" name="foto" id="foto"
+                            rows="1"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="texto">Preço</label>
+                        <textarea [(ngModel)]='produto.preco' class="form-control" name="texto" id="texto"
+                            rows="1"></textarea>
+                        <div style="color: red; font-size: 75%;">
+                            Utilize ponto '.' para separar os reais dos centavos!! (ex.: 5.99)
                         </div>
                     </div>
-                    <p> Descrição: {{item.descricao}}.</p>
-                    <p> Categoria: {{item.categoria.categoria}}. </p>
-                    <p> Região: {{item.regiao}} </p>
-                    <p> Quantidade: {{item.qtd}} </p>
+                    <div class="form-group">
+                        <label for="texto">Quantidade</label>
+                        <textarea [(ngModel)]='produto.qtd' class="form-control" name="texto" id="texto"
+                            rows="1"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="texto">Disponibilidade</label>
+                        <select class="form-control" name="tipo" id="tipo" [(ngModel)]='produto.disponibilidade'>
+                            <option>Selecione seu tipo de produção:</option>
+                            <option value="true">Disponível</option>
+                            <option value="false">Não disponível</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="texto">Região</label>
+                        <textarea [(ngModel)]='produto.regiao' class="form-control" name="texto" id="texto"
+                            rows="1"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="texto">Categoria</label>
+                        <select name="categoria" id="categoria" class="form-control" [(ngModel)]='idCategoria'
+                            (change)='findByIdCategoria()'>
+                            <option *ngFor='let item of listaCategorias' value="{{item.id}}">
+                                {{item.categoria}}
+                            </option>
+                        </select>
+                    </div>
+
                 </div>
-                <button class="btn btn-info" [routerLink]="['/produto-edit', item.id]">Editar produto</button>
-                <button class="btn btn-danger" [routerLink]="['/produto-delete', item.id]">Apagar produto</button>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-success" (click)='cadastrarProduto()'
+                        data-dismiss="modal">Cadastrar</button>
+                </div>
             </div>
         </div>
     </div>
-</div>
-
-
-
-<!-- Modal para Adicionar produtos -->
-<div class="modal fade" id="novoProduto" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado"
-    aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="TituloModalCentralizado">Novo Produto</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-
-                <div class="form-group">
-                    <label for="titulo">Nome</label>
-                    <input [(ngModel)]='produto.nome' type="text" class="form-control" id="titulo"
-                        placeholder="Digite o título">
-                </div>
-
-                <div class="form-group">
-                    <label for="texto">Descrição</label>
-                    <textarea [(ngModel)]='produto.descricao' class="form-control" name="texto" id="texto"
-                        rows="1"></textarea>
-                </div>
-                <div class="form-group">
-                    <label for="texto">Foto</label>
-                    <textarea [(ngModel)]='produto.foto' class="form-control" name="foto" id="foto"
-                        rows="1"></textarea>
-                </div>
-                <div class="form-group">
-                    <label for="texto">Preço</label>
-                    <textarea [(ngModel)]='produto.preco' class="form-control" name="texto" id="texto"
-                        rows="1"></textarea>
-                </div>
-                <div class="form-group">
-                    <label for="texto">Quantidade</label>
-                    <textarea [(ngModel)]='produto.qtd' class="form-control" name="texto" id="texto"
-                        rows="1"></textarea>
-                </div>
-                <div class="form-group">
-                    <label for="texto">Disponibilidade</label>
-                    <select class="form-control" name="tipo" id="tipo" [(ngModel)]='produto.disponibilidade'>
-                        <option>Selecione seu tipo de produção:</option>
-                        <option value="true">Disponível</option>
-                        <option value="false">Não disponível</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="texto">Região</label>
-                    <textarea [(ngModel)]='produto.regiao' class="form-control" name="texto" id="texto"
-                        rows="1"></textarea>
-                </div>
-
-                <div class="form-group">
-                    <label for="texto">Categoria</label>
-                    <select name="categoria" id="categoria" class="form-control" [(ngModel)]='idCategoria'
-                        (change)='findByIdCategoria()'>
-                        <option *ngFor='let item of listaCategorias' value="{{item.id}}">
-                            {{item.categoria}}
-                        </option>
-                    </select>
-                </div>
-
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
-                <button type="button" class="btn btn-success" (click)='cadastrarProduto()'
-                    data-dismiss="modal">Cadastrar</button>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- /Modal para Adicionar produtos -->
+    <!-- /Modal para Adicionar produtos -->

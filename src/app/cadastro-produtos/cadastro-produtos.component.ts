@@ -47,10 +47,7 @@ export class CadastroProdutosComponent implements OnInit {
     this.getAllProdutos()
     this.getAllCategorias()
      
-  }
- /*  load() {
-    location.reload()
-  } */
+  } 
 
   reloadCurrentRoute() {
     let currentUrl = this.router.url;
@@ -80,9 +77,7 @@ export class CadastroProdutosComponent implements OnInit {
 
     this.produtoService.postProduto(this.produto).subscribe((resp : Produto) =>{
       this.produto = resp
-      alert("Produto Cadastrado!!")  
-      /* this.router.navigate(['/entrar'])    */ 
-      /* this.load() */
+      alert("Produto Cadastrado!!")       
       this.reloadCurrentRoute()
     })    
   }

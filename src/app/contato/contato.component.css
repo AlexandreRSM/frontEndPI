@@ -1,5 +1,5 @@
 .geral{
-  background: url(https://i.imgur.com/hAXFYwx.jpg?1) no-repeat center;
+  background: url(https://i.imgur.com/58NVmAi.jpg) no-repeat center;
   background-size: cover;
   min-height: 100vh;
   display: flex;
@@ -8,19 +8,16 @@
 }
 
 .container{
-  /* max-width: 1200px; */
-  padding: 0 40px;
+  /* max-width: 1200px;
+  padding: 0 40px; */
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   flex-wrap: wrap;
 }
 
-h1{
+h1, h5, h6{
   color: #ffffff;
-  background-color: rgba(0, 0, 0, 0.150);
-  border-radius: 50px;
-  padding: 10px;
   margin-top: 30px;
 }
 
@@ -66,9 +63,10 @@ h1{
 } */
 
 .btn-hover.color-8 {
-  background-image: linear-gradient(to right, #d49f50, #ec7e00, #eb9e2c, #ecda34);
-  box-shadow: 4px 4px 30px 4px rgba(0, 0, 0, 0.61);
+  background-image: linear-gradient(to right, #56693e, #47812ecc, #24570ecc, #21530ccc);
+  box-shadow: 4px 4px 30px 4px rgba(255, 255, 255, 0.363);
 }
+
 .mt-100{
   margin-top: 100px;
 }
