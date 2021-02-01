@@ -32,12 +32,15 @@ export class EntrarComponent implements OnInit {
       environment.tipo = this.userLogin.tipo
       environment.email = this.userLogin.email
       
-      this.router.navigate(['/cadastro-produtos']) /* FAZER O IF DO USUARIO ou PRODUTO*/
+      if (environment.tipo ==  'Produtor'){      
+      this.router.navigate(['/cadastro-produtos'])
+      } else {
+        this.router.navigate(['/cardapio'])
+      }
 
     }, erro => {
       if (erro.status == 500) {
         alert("Usuários ou senha estão incorretos")
-
       }
     })
   }

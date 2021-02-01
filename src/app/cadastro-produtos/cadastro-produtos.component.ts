@@ -6,6 +6,7 @@ import { Produto } from '../Model/Produto';
 import { ProdutoService } from '../service/produto.service';
 import { environment } from 'src/environments/environment.prod';
 import { Categoria } from '../Model/Categoria';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-cadastro-produtos',
@@ -30,19 +31,33 @@ export class CadastroProdutosComponent implements OnInit {
   constructor(
     private router : Router,
     private produtoService : ProdutoService,
-    private categoriaService : CategoriaService
+    private categoriaService : CategoriaService,
+    /* private location: Location */
+    
 
   ) { }
 
   ngOnInit(){
     window.scroll(0,0)
 
-    if(environment.token == '') /* ARRUMAR CASO SEJA PRODUTOR OU USUARIO*/{
-      this.router.navigate(['/entrar']) /* ARRUMAR ESSE LINK */
+    if(environment.token == '') {
+      this.router.navigate(['/entrar'])
     }
+
     this.getAllProdutos()
-    this.getAllCategorias()    
+    this.getAllCategorias()
+     
   }
+ /*  load() {
+    location.reload()
+  } */
+
+  reloadCurrentRoute() {
+    let currentUrl = this.router.url;
+    this.router.navigateByUrl('/', {skipLocationChange: true}).then(() => {
+        this.router.navigate([currentUrl]);
+    });
+}
 
   getAllCategorias(){
     this.categoriaService.getAllCategoria().subscribe((resp: Categoria[]) =>{
@@ -65,9 +80,13 @@ export class CadastroProdutosComponent implements OnInit {
 
     this.produtoService.postProduto(this.produto).subscribe((resp : Produto) =>{
       this.produto = resp
-      alert("Produto Cadastrado!!")      
-    })
+      alert("Produto Cadastrado!!")  
+      /* this.router.navigate(['/entrar'])    */ 
+      /* this.load() */
+      this.reloadCurrentRoute()
+    })    
   }
+ 
 
   getAllProdutos() {
     this.produtoService.getAllProduto().subscribe((resp: Produto[]) => {
