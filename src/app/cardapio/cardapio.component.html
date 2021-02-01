@@ -19,7 +19,7 @@
 <div id="bg">    
     <div class="menu m-5">
         <div class="food-items mt-4 mb-4" *ngFor="let item of listaProdutos">
-            <img src="https://i.imgur.com/FjBJsEE.jpg" alt="">
+            <img src="{{item.foto}}" alt="">
             <div class="details">
                 <div class="details-sub">
                     <div class="container d-flex m-1">
@@ -34,7 +34,7 @@
                     <p> Categoria: {{item.categoria.categoria}}. </p>
                     <p> Região: {{item.regiao}} </p>
                     <p> Quantidade: {{item.qtd}} </p>
-                    <!-- <p> Produtor: {{item.user.nome}} </p> ADICIONAR NOME DO PRODUTOR -->
+                  <!--   <p> Produtor: {{item.user.nome}} </p>   -->                   
                 </div>
                 <button class="btn-hover color-5"><i class="bi bi-bag-plus"></i></button>             
             </div>
@@ -43,4 +43,3 @@
 </div>
 
 
-<!-- COLOCAR A FOTO!!!!-->

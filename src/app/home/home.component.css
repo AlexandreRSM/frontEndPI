@@ -274,6 +274,11 @@ p {
 .about a:hover {
   text-decoration: underline;
 }
+.bg{
+  background-color: #ffffffa1;
+  border-radius: 100px;
+  color: black;
+}
 
 
 

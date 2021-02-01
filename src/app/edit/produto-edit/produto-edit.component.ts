@@ -29,8 +29,8 @@ export class ProdutoEditComponent implements OnInit {
 
   ngOnInit() {
     window.scroll(0,0)
-    if (environment.token == '') /* ARRUMAR CASO SEJA PRODUTOR OU USUARIO*/ {
-      this.router.navigate(['/entrar']) /* ARRUMAR ESSE LINK */
+    if (environment.token == '') {
+      this.router.navigate(['/entrar']) 
     }
     let id = this.route.snapshot.params['id']
     this.findByIdProduto(id)

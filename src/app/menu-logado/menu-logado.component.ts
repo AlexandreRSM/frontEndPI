@@ -18,6 +18,13 @@ export class MenuLogadoComponent implements OnInit {
   ngOnInit(){
   }
 
+  menuTipo(){
+    if (environment.tipo ==  'Produtor'){      
+      this.router.navigate(['/cadastro-produtos'])
+      } else {
+        this.router.navigate(['/cardapio'])
+      }    
+  }
 
   sair(){
     this.router.navigate(['/home'])

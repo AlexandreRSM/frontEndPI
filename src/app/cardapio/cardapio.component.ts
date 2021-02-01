@@ -30,6 +30,7 @@ export class CardapioComponent implements OnInit {
   getAllProdutos() {
     this.produtoService.getAllProduto().subscribe((resp: Produto[]) => {
       this.listaProdutos = resp
+      console.log(resp)
     })
   }  
 
