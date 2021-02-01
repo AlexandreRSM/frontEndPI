@@ -1,3 +1,6 @@
+import { UsuarioEditComponent } from './edit/usuario-edit/usuario-edit.component';
+import { ProdutoDeleteComponent } from './delete/produto-delete/produto-delete.component';
+import { ProdutoEditComponent } from './edit/produto-edit/produto-edit.component';
 import { CadastroProdutosComponent } from './cadastro-produtos/cadastro-produtos.component';
 import { CategoriaEditComponent } from './edit/categoria-edit/categoria-edit.component';
 import { CadastroCategoriaComponent } from './cadastro-categoria/cadastro-categoria.component';
@@ -22,8 +25,10 @@ const routes: Routes = [
   { path: "cadastro-categoria", component: CadastroCategoriaComponent },
   { path: "categoria-edit/:id", component: CategoriaEditComponent },
   { path: "categoria-delete/:id", component: CategoriaDeleteComponent },
-  { path: "cadastro-produtos", component: CadastroProdutosComponent }
-
+  { path: "cadastro-produtos", component: CadastroProdutosComponent },
+  { path: "produto-edit/:id", component: ProdutoEditComponent },
+  { path: "produto-delete/:id", component: ProdutoDeleteComponent },
+  { path: "usuario-edit/:id", component: UsuarioEditComponent }
 
 ];
 

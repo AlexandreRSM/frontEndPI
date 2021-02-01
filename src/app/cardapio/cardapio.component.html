@@ -1,4 +1,22 @@
-<div id="bg" class="mt-100">    
+<nav >
+    <div class="nav nav-tabs d-flex justify-content-center mt-100" id="nav-tab" role="tablist">
+
+      <a class="nav-item nav-link active text-secondary font-weight-bold"
+        id="nav-todosProdutos-tab" data-toggle="tab" href="#todosProdutos" role="tab"
+        aria-controls="nav-todosProdutos" aria-selected="true">Todos os Produtos</a>
+      <a
+        class="nav-item nav-link text-secondary font-weight-bold" id="nav-todosProdutores-tab" data-toggle="tab"
+        href="#todosProdutores" role="tab" aria-controls="nav-todosProdutores" aria-selected="false">Todos os Produtores</a>
+
+      <a class="nav-item nav-link text-secondary font-weight-bold"
+        id="nav-produtosCategoria-tab" data-toggle="tab" href="#produtosCategoria" role="tab" aria-controls="nav-produtosCategoria"
+        aria-selected="false">Produtos por Categoria</a>
+
+    </div>
+  </nav>
+
+
+<div id="bg">    
     <div class="menu m-5">
         <div class="food-items mt-4 mb-4" *ngFor="let item of listaProdutos">
             <img src="https://i.imgur.com/FjBJsEE.jpg" alt="">

@@ -40,6 +40,7 @@ export class CadastroProdutosComponent implements OnInit {
     if(environment.token == '') /* ARRUMAR CASO SEJA PRODUTOR OU USUARIO*/{
       this.router.navigate(['/entrar']) /* ARRUMAR ESSE LINK */
     }
+    this.getAllProdutos()
     this.getAllCategorias()    
   }
 
@@ -67,5 +68,12 @@ export class CadastroProdutosComponent implements OnInit {
       alert("Produto Cadastrado!!")      
     })
   }
+
+  getAllProdutos() {
+    this.produtoService.getAllProduto().subscribe((resp: Produto[]) => {
+      this.listaProdutos = resp
+    })
+  }  
+
 
 }

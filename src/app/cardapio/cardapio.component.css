@@ -44,7 +44,7 @@
     text-align: justify;
   }
   
-  a {
+  /* a {
     background-color: #CB202D;
     display: block;
     color: white;
@@ -55,7 +55,7 @@
     bottom: 0;
     font-size: 20px;
     padding: 30px 0;
-  }
+  } */
   
   .d-line{
       display: inline;

@@ -2,27 +2,27 @@
     <div class="container">
         <button class="btn btn-info mr-3" data-toggle="modal" data-target="#novoProduto">Adicionar produto</button>
     </div>
+<div id="bg">
     <div class="menu m-5">
-        <div class="food-items mt-4 mb-4">
+        <div class="food-items mt-4 mb-4" *ngFor="let item of listaProdutos">
             <img src="https://i.imgur.com/FjBJsEE.jpg" alt="">
             <div class="details">
                 <div class="details-sub">
                     <div class="container d-flex m-1">
                         <div class="col-md-6">
-                            <h4>Cebola</h4>
+                            <h4>{{item.nome}}</h4>
                         </div>
                         <div class="col-md-6">
-                            <h4 class="preco">R$ 2,00</h4>
+                            <h4 class="preco">R$ {{item.preco}}</h4>
                         </div>
                     </div>
-                    <p> Descrição: .</p>
-                    <p> Categoria: . </p>
-                    <p> Região: . </p>
-                    <p> Quantidade: . </p>
+                    <p> Descrição: {{item.descricao}}.</p>
+                    <p> Categoria: {{item.categoria.categoria}}. </p>
+                    <p> Região: {{item.regiao}} </p>
+                    <p> Quantidade: {{item.qtd}} </p>
                 </div>
-                <button class="btn-hover color-5"><i class="bi bi-bag-plus"></i></button>
-                <button class="btn btn-info" [routerLink]="[]">Editar produto</button>
-                <button class="btn btn-danger" [routerLink]="[]">Apagar produto</button>
+                <button class="btn btn-info" [routerLink]="['/produto-edit', item.id]">Editar produto</button>
+                <button class="btn btn-danger" [routerLink]="['/produto-delete', item.id]">Apagar produto</button>
             </div>
         </div>
     </div>
@@ -30,7 +30,7 @@
 
 
 
-<!-- Modal -->
+<!-- Modal para Adicionar produtos -->
 <div class="modal fade" id="novoProduto" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado"
     aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
@@ -97,3 +97,4 @@
         </div>
     </div>
 </div>
+<!-- /Modal para Adicionar produtos -->

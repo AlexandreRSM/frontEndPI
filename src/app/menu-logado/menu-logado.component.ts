@@ -9,6 +9,7 @@ import { environment } from 'src/environments/environment.prod';
 })
 export class MenuLogadoComponent implements OnInit {
   nome = environment.nome
+  id = environment.id
 
   constructor(
     private router : Router
@@ -17,10 +18,11 @@ export class MenuLogadoComponent implements OnInit {
   ngOnInit(){
   }
 
+
   sair(){
     this.router.navigate(['/home'])
     environment.token = ''
-    environment.nome = ''
+    environment.nome = ''   
   }
 
 }
