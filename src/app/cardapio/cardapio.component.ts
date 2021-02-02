@@ -17,6 +17,7 @@ export class CardapioComponent implements OnInit {
   listaProdutos: Produto[]
   user: Usuario = new Usuario()
   listaCategoria : Categoria[]
+  categoriaPost : string
   categoria : string
   idUsuario = environment.id
   produtoPost: string
@@ -34,6 +35,7 @@ export class CardapioComponent implements OnInit {
   ngOnInit() {
 
     this.getAllProdutos()
+    this.findAllCategorias()
   }
 
   getAllProdutos() {
@@ -59,9 +61,14 @@ export class CardapioComponent implements OnInit {
       })
     }
   }
+  findByNomeRegiao(){
+    this.produtoService.getByRegiaoProduto(this.produtoPost).subscribe((resp : Produto[]) => {
+      this.listaProdutos = resp
+    })
+  }
 
-  findByCategoria() {
-    this.categoriaService.getByNomeCategoria(this.categoria).subscribe((resp: Categoria[]) => {
+  findAllCategorias(){
+    this.categoriaService.getAllCategoria().subscribe((resp: Categoria[]) => {
       this.listaCategoria = resp
     })
   }

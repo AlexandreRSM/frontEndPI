@@ -25,8 +25,8 @@ export class CategoriaService {
     return this.http.get<Categoria>(`http://localhost:8080/cat/${id}`, this.token)
   }
 
-  getByNomeCategoria(cat : string): Observable<Categoria[]>{
-    return this.http.get<Categoria[]>(`http://localhost:8080/cat/categoria/${cat}`, this.token)
+  getByNomeCategoria(categoria : string): Observable<Categoria[]>{
+    return this.http.get<Categoria[]>(`http://localhost:8080/cat/categoria/${categoria}`, this.token)
   }
 
   postCategoria(categoria: Categoria): Observable<Categoria> {

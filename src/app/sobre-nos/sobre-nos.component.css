@@ -65,3 +65,22 @@
   .mt-100{
     margin-top: 100px;
   }
+
+  .img-fluid {
+    -webkit-filter: grayscale(100%);
+  
+  }
+  
+  .img-fluid:hover{
+    -webkit-filter: grayscale(0%);
+    transition: 0.5s;
+  }
+  
+  #parceiros{
+    color:rgba(37, 113, 60, 0.66);
+  
+  }
+  
+  #parceirosGen{
+    background-color: white;
+  }
