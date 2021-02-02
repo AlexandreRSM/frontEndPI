@@ -1,3 +1,4 @@
+import { AlertService } from './../../service/alert.service';
 import { CategoriaService } from './../../service/categoria.service';
 import { ProdutoService } from './../../service/produto.service';
 import { ActivatedRoute, Router } from '@angular/router';
@@ -18,7 +19,8 @@ export class ProdutoDeleteComponent implements OnInit {
   constructor(
     private router: Router,
     private route: ActivatedRoute,
-    private produtoService: ProdutoService
+    private produtoService: ProdutoService,
+    private alert : AlertService
   ) { }
 
   ngOnInit() {
@@ -39,7 +41,7 @@ export class ProdutoDeleteComponent implements OnInit {
 
   apagar() {
     this.produtoService.deleteProduto(this.idProduto).subscribe(() =>{
-      alert('Produto apagado com sucesso')
+      this.alert.showAlertSuccess('Produto apagado com sucesso')
       this.router.navigate(['/cadastro-produtos'])
     })
   }

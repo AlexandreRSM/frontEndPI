@@ -1,3 +1,4 @@
+import { AlertService } from './../service/alert.service';
 import { CategoriaService } from './../service/categoria.service';
 import { Router } from '@angular/router';
 import { Categoria } from './../Model/Categoria';
@@ -16,7 +17,8 @@ export class CadastroCategoriaComponent implements OnInit {
 
   constructor(
     private router : Router,
-    private categoriaService: CategoriaService
+    private categoriaService: CategoriaService,
+    private alert : AlertService
   ) { }
 
   ngOnInit() {
@@ -34,7 +36,7 @@ export class CadastroCategoriaComponent implements OnInit {
   cadastrar(){
     this.categoriaService.postCategoria(this.categoria).subscribe((resp : Categoria) =>{
       this.categoria = resp
-      alert('Categoria cadastrada com sucesso')
+      this.alert.showAlertSuccess('Categoria cadastrada com sucesso')
       this.findAllCategorias()
       this.categoria = new Categoria()
     })

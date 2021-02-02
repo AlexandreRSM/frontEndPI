@@ -1,3 +1,4 @@
+import { AlertService } from './../../service/alert.service';
 import { environment } from './../../../environments/environment.prod';
 import { AuthService } from './../../service/auth.service';
 import { Usuario } from './../../Model/Usuario';
@@ -20,7 +21,8 @@ export class UsuarioEditComponent implements OnInit {
   constructor(
     private authService: AuthService,
     private route: ActivatedRoute,
-    private router: Router
+    private router: Router,
+    private alert : AlertService
   ) { }
 
   ngOnInit() {
@@ -45,12 +47,12 @@ export class UsuarioEditComponent implements OnInit {
     this.usuario.tipo = this.tipoUsuario
 
     if (this.usuario.senha != this.confirmarSenha) {
-      alert("A senha esta incorreta.")
+      this.alert.showAlertDanger("A senha esta incorreta.")
     } else {
       this.authService.cadastrar(this.usuario).subscribe((resp: Usuario) => {
         this.usuario = resp
         this.router.navigate(['/entrar'])
-        alert("Usuário atualizado com sucesso, faça o login novamente!")
+        this.alert.showAlertSuccess("Usuário atualizado com sucesso, faça o login novamente!")
         environment.token = ''
         environment.nome = ''
         environment.id = 0

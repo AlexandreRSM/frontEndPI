@@ -1,3 +1,4 @@
+import { AlertService } from './../service/alert.service';
 import { Usuario } from './../Model/Usuario';
 import { CategoriaService } from './../service/categoria.service';
 import { Router } from '@angular/router';
@@ -26,13 +27,15 @@ export class CadastroProdutosComponent implements OnInit {
   categoria : Categoria = new Categoria
   listaCategorias : Categoria[]
   idCategoria : number
-
+  key = 'data'
+  reverse = true
 
   constructor(
     private router : Router,
     private produtoService : ProdutoService,
     private categoriaService : CategoriaService,
-    /* private location: Location */
+    private alert : AlertService
+    
     
 
   ) { }
@@ -77,7 +80,7 @@ export class CadastroProdutosComponent implements OnInit {
 
     this.produtoService.postProduto(this.produto).subscribe((resp : Produto) =>{
       this.produto = resp
-      alert("Produto Cadastrado!!")       
+      this.alert.showAlertSuccess("Produto Cadastrado!!")       
       this.reloadCurrentRoute()
     })    
   }

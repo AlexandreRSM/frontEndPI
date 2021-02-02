@@ -25,6 +25,9 @@ import { CategoriaDeleteComponent } from './delete/categoria-delete/categoria-de
 import { ProdutoEditComponent } from './edit/produto-edit/produto-edit.component';
 import { ProdutoDeleteComponent } from './delete/produto-delete/produto-delete.component';
 import { UsuarioEditComponent } from './edit/usuario-edit/usuario-edit.component';
+import { AlertComponent } from './alert/alert.component';
+import { ModalModule } from 'ngx-bootstrap/modal';
+import { OrderModule } from 'ngx-order-pipe';
 
 
 @NgModule({
@@ -48,14 +51,19 @@ import { UsuarioEditComponent } from './edit/usuario-edit/usuario-edit.component
     CategoriaDeleteComponent,
     ProdutoEditComponent,
     ProdutoDeleteComponent,
-    UsuarioEditComponent
+    UsuarioEditComponent,
+    AlertComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FontAwesomeModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ModalModule.forRoot(),
+    OrderModule
+
+
   ],
   providers: [],
   bootstrap: [AppComponent]

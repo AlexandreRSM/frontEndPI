@@ -1,3 +1,4 @@
+import { AlertService } from './../../service/alert.service';
 import { CategoriaService } from './../../service/categoria.service';
 import { ProdutoService } from './../../service/produto.service';
 import { ActivatedRoute, Router } from '@angular/router';
@@ -24,7 +25,8 @@ export class ProdutoEditComponent implements OnInit {
     private router: Router,
     private route: ActivatedRoute,
     private produtoService: ProdutoService,
-    private categoriaService : CategoriaService
+    private categoriaService : CategoriaService,
+    private alert : AlertService
   ) { }
 
   ngOnInit() {
@@ -63,7 +65,7 @@ export class ProdutoEditComponent implements OnInit {
 
     this.produtoService.putProduto(this.produto).subscribe((resp: Produto) => {
       this.produto = resp
-      alert('Produto atualizado com sucesso!')
+      this.alert.showAlertSuccess('Produto atualizado com sucesso!')
       this.router.navigate(['/cadastro-produtos'])
     })
   }
